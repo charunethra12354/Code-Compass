@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeCompass - Track your coding practice, goals, and learning progress.">
+    <title>CodeCompass | Coding Learning Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2 class="logo">🧭 CodeCompass</h2>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">📊 Dashboard</a>
+            <a href="#languages" class="nav-link">💻 Languages</a>
+            <a href="#goals" class="nav-link">🎯 Daily Goals</a>
+            <a href="#journal" class="nav-link">📝 Learning Journal</a>
+            <a href="#achievements" class="nav-link">🏆 Achievements</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Keep learning.</p>
+            <p>Keep growing. 🚀</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL LEARNING SPACE</p>
+                <h1>Welcome to CodeCompass 👋</h1>
+                <p class="subtitle">Every line of code takes you one step forward.</p>
+            </div>
+            <button id="themeToggle" class="theme-button" aria-label="Toggle theme">☀️</button>
+        </header>
+
+        <section id="dashboard">
+            <h2 class="section-title">Your Dashboard</h2>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <span class="stat-icon">⏱️</span>
+                    <p>Total Learning Time</p>
+                    <h2 id="totalHours">0h 0m</h2>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">💻</span>
+                    <p>Languages Explored</p>
+                    <h2 id="languageCount">0</h2>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <p>Goals Completed</p>
+                    <h2 id="goalsCompleted">0</h2>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">🔥</span>
+                    <p>Learning Streak</p>
+                    <h2 id="streak">0 days</h2>
+                </article>
+            </div>
+        </section>
+
+        <section id="languages" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <h2 class="section-title">Programming Languages</h2>
+                    <p class="muted">Track the skills you're developing.</p>
+                </div>
+            </div>
+
+            <form id="languageForm" class="input-row">
+                <input id="languageName" type="text" placeholder="e.g. Java" maxlength="40" required>
+                <input id="languageProgress" type="number" placeholder="Progress %" min="0" max="100" required>
+                <button type="submit">+ Add Language</button>
+            </form>
+
+            <div id="languageList" class="language-grid"></div>
+        </section>
+
+        <section id="goals" class="content-section">
+            <h2 class="section-title">Daily Coding Goals</h2>
+            <p class="muted">Small steps lead to big achievements.</p>
+
+            <form id="goalForm" class="input-row">
+                <input id="goalInput" type="text" placeholder="e.g. Practice 5 Java programs" maxlength="150" required>
+                <button type="submit">+ Add Goal</button>
+            </form>
+
+            <div id="goalList" class="goal-list"></div>
+        </section>
+
+        <section id="journal" class="content-section">
+            <h2 class="section-title">Learning Journal</h2>
+            <p class="muted">Record what you learned today.</p>
+
+            <form id="journalForm" class="journal-form">
+                <input id="journalTitle" type="text" placeholder="What did you learn?" maxlength="100" required>
+                <textarea id="journalContent" placeholder="Write about your coding practice..." rows="4" maxlength="2000" required></textarea>
+                <button type="submit">Save Journal Entry</button>
+            </form>
+
+            <div id="journalList" class="journal-list"></div>
+        </section>
+
+        <section id="achievements" class="content-section">
+            <h2 class="section-title">Your Achievements 🏆</h2>
+            <div class="achievement-grid">
+                <article class="achievement-card">
+                    <span>🌱</span>
+                    <h3>Getting Started</h3>
+                    <p>Add your first programming language.</p>
+                    <strong id="starterBadge">Locked</strong>
+                </article>
+
+                <article class="achievement-card">
+                    <span>🎯</span>
+                    <h3>Goal Getter</h3>
+                    <p>Complete your first coding goal.</p>
+                    <strong id="goalBadge">Locked</strong>
+                </article>
+
+                <article class="achievement-card">
+                    <span>📖</span>
+                    <h3>Knowledge Keeper</h3>
+                    <p>Write your first journal entry.</p>
+                    <strong id="journalBadge">Locked</strong>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with 💜 by a learner, for learners.</p>
+            <p>CodeCompass © <span id="year"></span></p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
